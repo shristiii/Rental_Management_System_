@@ -1,0 +1,470 @@
+{% load static %}
+{% static "images" as baseUrl  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=devoce-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+	<title>Kantipur Real Estate</title>
+	<link rel="stylesheet" href="{% static './css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+		<header class="topbar">
+            
+        </header>
+        <nav>
+
+            <div class="top">
+                <div class="container flex justify-between">
+                    <div class="contact flex items-center">
+                        <img src="{% static './icons/phone.svg' %}">
+                        <div>
+                            <h5>Call US: +977 9803204545</h5>
+                            <h6>E-mail: Kantipurealstate@gmail.com </h6>
+                        </div>
+                    </div>
+                    <div class="branding flex items-center">
+                        <img src="{% static './images/lll.png' %}" height="75px" width="100px">
+                    </div>
+                    <div class="time flex items-center">
+                        <img src="{% static './icons/clock.svg' %}">
+                        <div>
+                            <h5>Working Hours</h5>
+                            <h6>Sunday-Friday(10am-5pm)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar magic-shadow">
+                <div class="container flex justify-center">
+                    <a href="#" class="active">Home</a>
+                    <a href="about">About us</a>
+                    <a href="forrent">For Rent</a>
+                    <a href="/notify">Notify</a>
+                    <a href="/contact">Contact us</a>
+                    
+    
+    
+                </div>
+            </div>
+        </nav>
+
+        <header class="hero flex ">
+            <div class="container">
+
+            </div>
+        
+            
+
+
+
+
+
+
+    </header>
+
+    <section class="top-products">
+        <div class="container">
+            <h1 class="section-heading">Available Buildings</h1>
+
+            <div class="cards">
+                <div class="imge">
+                   <img src="{% static './images/building1.jpg' %}">
+               </div>
+            <div class="title">
+                <h1>Kathmandu-Dhumbarahi</h1>
+           </div>
+           <div class="des">
+               <p>5 Bedroom and Living Hall with Parking Space</p>
+               <a href="/read1">
+               <button>View Details</button></a>
+           </div>
+           </div>
+
+
+           <div class="cards">
+               <div class="imge">
+                  <img src="{% static './images/building2.jpg' %}">
+              </div>
+           <div class="title">
+               <h1>Kathmandu-Tinkune</h1>
+          </div>
+          <div class="des">
+              <p>5 Bedrooms and 2 Kitchen with Parking space</p>
+
+              <a href="/read2">
+                <button>View Details</button></a>                  
+          </div>
+          </div>
+
+          <div class="cards">
+           <div class="imge">
+              <img src="{% static './images/building3.jpg' %}">
+          </div>
+       <div class="title">
+           <h1>Kathmandu-Chabahil</h1>
+      </div>
+      <div class="des">
+          <p>9 Bedrooms and 3 Kitchen with Parking Space</p>
+          <a href="/read3">
+            <button>View Details</button></a>     
+                
+      </div>
+      </div>
+
+      <div class="cards">
+       <div class="imge">
+          <img src="{% static './images/building4.jpg' %}">
+      </div>
+   <div class="title">
+       <h1>Kathmandu-Balaju</h1>
+  </div>
+  <div class="des">
+      <p>5 Bedrooms and 2 Kitchen with Parking space</p>
+      <a href="/read4">
+        <button>View Details</button></a>     
+
+                
+  </div>
+  </div>
+
+
+  <div class="cards">
+   <div class="imge">
+      <img src="{% static './images/building5.jpg' %}">
+  </div>
+   <div class="title">
+       <h1>Kathmandu-Gongabu</h1>
+   </div>
+   <div class="des">
+  <p>3 Bedrooms with Attached Bathroom</p>
+  <a href="/read5">
+    <button>View Details</button></a>     
+
+                
+   </div>
+   </div>
+
+   <div class="cards">
+       <div class="imge">
+          <img src="{% static './images/building6.jpg' %}">
+      </div>
+   <div class="title">
+       <h1>Kathmandu-Koteshwor</h1>
+  </div>
+  <div class="des">
+      <p>7 Bedrooms and 2 Kitchen with Parking space</p>
+      <a href="/read6">
+        <button>View Details</button></a>     
+                
+  </div>
+  </div>
+
+
+  <div class="cards">
+    <div class="imge">
+       <img src="{% static './images/building7.jpg' %}">
+   </div>
+<div class="title">
+    <h1>Kathmandu-Nayabazar</h1>
+</div>
+<div class="des">
+   <p>One Kitchen plus 2 Bedroom.</p>
+   <a href="/read7">
+   <button>View Details</button></a>
+
+</div>
+</div>
+
+
+<div class="cards">
+<div class="imge">
+   <img src="{% static './images/building8.jpg' %}">
+</div>
+<div class="title">
+<h1>Kathmandu-Baneshwor</h1>
+</div>
+<div class="des">
+<p>3 Bedroom with 1 Kitchen</p>
+<a href="/read8">
+<button>View Details</button></a>
+
+</div>
+</div>
+            
+
+           
+   </div>
+</section>
+         
+
+                <section class="all-products">
+                            <div class="container">
+                                 <h1 class="section-head">Available Rooms</h1>
+                         <div class="cards">
+                         <div class="imge">
+                          <img src="{% static './images/room1.jpg' %}">
+                             </div>
+                        <div class="title">
+                        <h1>Kathmandu-Balaju</h1>
+                     </div>
+                      <div class="des">
+                           <p>3 Bedrooms with Attached Bathroom  <br> Parking Facility</p>
+                        <a href="/room1">
+                           <button>View Details</button></a>     
+                 </div>
+                </div>
+
+
+                 <div class="cards">
+                      <div class="imge">
+                         <img src="{% static './images/room2.jpg' %}">
+                      </div>
+                  <div class="title">
+                     <h1>Kathmandu-Koteshwor</h1>
+                 </div>
+                     <div class="des">
+                       <p>3 Bedrooms with Attached Bathroom</p>
+                       <a href="/room2">
+                           <button>View Details</button></a>     
+                     </div>
+                     </div>
+
+                  <div class="cards">
+                      <div class="imge">
+                     <img src="{% static './images/room3.jpg' %}">
+                      </div>
+                 <div class="title">
+                  <h1>Kathmandu-Chabahil</h1>
+             </div>
+                  <div class="des">
+                     <p>2 Bedrooms with Attached Bathroom</p>
+                     <a href="/room3">
+                     <button>View Details</button></a>     
+               </div>
+                  </div>
+
+                 <div class="cards">
+                     <div class="imge">
+                    <img src="{% static './images/room4.jpg' %}">
+                 </div>
+                 <div class="title">
+                 <h1>Kathmandu-Samakhusi</h1>
+                     </div>
+             <div class="des">
+              <p>2 Bedrooms with Attached Bathroom</p>
+                  <a href="/room4">
+                   <button>View Details</button></a>     
+                </div>
+                </div>
+
+
+                <div class="cards">
+             <div class="imge">
+                  <img src="{% static './images/room5.jpg' %}">
+                 </div>
+             <div class="title">
+            <h1>Kathmandu-Manamaiju</h1>
+                 </div>
+             <div class="des">
+             <p>3 Bedrooms with Attached Bathroom</p>
+             <a href="/room5">
+             <button>View Details</button></a>     
+              </div>
+              </div>
+
+              <div class="cards">
+                 <div class="imge">
+                     <img src="{% static './images/room6.jpg' %}">
+               </div>
+                 <div class="title">
+                   <h1>Kathmandu-Nepaltar</h1>
+             </div>
+             <div class="des">
+             <p>2 Bedrooms,1 Kitchen with Attached bathroom</p>
+              <a href="/room6">
+              <button>View Details</button></a>     
+             </div>
+             </div>
+
+             <div class="cards">
+              <div class="imge">
+            <img src="{% static './images/room7.jpg' %}">
+             </div>
+            <div class="title">
+             <h1>Kathmandu-Gongabu</h1>
+            </div>
+            <div class="des">
+             <p>1 Bedroom with Attached Bathroom</p>
+         <a href="/room7">
+         <button>View Details</button></a>     
+            </div>
+            </div>
+
+            <div class="cards">
+            <div class="imge">
+            <img src="{% static './images/room8.jpg' %}">
+            </div>
+            <div class="title">
+            <h1>Kathmandu-Banasthali</h1>
+            </div>
+            <div class="des">
+            <p>5 Bedrooms with Attached Bathroom<br></p>
+            <a href="/room8">
+            <button>View Details</button></a>     
+            </div>
+            </div>
+             </div>
+            </section>
+
+        <section class="about-room">
+            <div class="container">
+                <h1 class="section-heading">About Kantipur Realestate</h1>
+                <div class="about-room-wrap flex">
+                    <div class="flex-1">
+                        <img src="{% static './images/lll.png' %}">
+                    </div>
+                    <div class="flex-1 justify-between">
+                        <h2>Kantipur Realestate is one of the best online platform for those who want to buy sell and rent their properties.</h2>
+                        <p>We connect buyers and sellers. We always make sure that the property which we are marketing here has clear titles, good quality construction and right location for respective purposes. This is the best platform for our clients and partners in their journey of discovering, renting, buying, selling the properties. We advertise your property in our website. We have normal listing plans and featured listing plans. If you want to post your property as featured, which is shown in the homepage, we charge applicable fees. Always feel free to contact us. At kantipurrealestate.com we help you to find joy...</p>
+                        <a href="/about">
+                        <button class="btn btn-secondary">View Details</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-us flex">
+            <div class="contact-info-wrapper">
+                <h1 class="section-heading">
+                    Contact us
+                </h1>
+                <div class="contact-info">
+                    <div>
+                        <div>
+                        <img src="{% static './icons/phone-2.svg' %}">
+                        <div>
+                            <span>Call us</span>
+                            <span>(+977) 9803204545</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src="{% static './icons/bag-2.svg' %}">
+                            <div>
+                                <span>E-mail :</span>
+                                <span> Kantipurealstate@gmail.com </span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <img src="{% static './icons/clock-2.svg' %}">
+                                <div>
+                                    <span>Working Hours</span>
+                                    <span>Sun-Fri(10am-5pm)</span>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.979530377138!2d85.33978801525662!3d27.6870275329911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb192938882be5%3A0xacd653dd23218855!2sKantipur%20Real%20Estate%20Nepal%20Pvt.Ltd!5e0!3m2!1sen!2snp!4v1615737113169!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="box">
+                    <h3>About us</h3>
+                    <p> It is one of the best online platform in Nepal for those who want to buy,sell and rent their properties.</p>
+                    <a href="/about">
+                    <button class="btn btn-secondary">Read More</button></a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href="/about">About us</a>
+                        </li>
+                        <li>
+                            <a href="/forrent">For Rent</a>
+                        </li>
+                        <li>
+                            <a href="/notify">Notify</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/facebook.svg' %}">
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/instagram.svg' %}">
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/twitter.svg' %}">
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/google.svg' %}">
+                                <span>Google</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box instagram-api">
+                    <h3>Instagram</h3>
+                    <div class="post-wrapper">
+                        <div>
+                            <img src="{% static './images/building1.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room3.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room4.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room5.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/building7.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room2.jpg' %}">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+            <footer class="copyright">
+                <div>
+                    Copyright © 2020. All rights reserved by <a href="#">Kantipur-Rentalestate.</a>
+                </div>
+            </footer>   
+
+</body>
+</html>

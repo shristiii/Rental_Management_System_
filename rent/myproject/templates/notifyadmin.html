@@ -1,0 +1,53 @@
+<style>
+
+	.btn{
+		align-items: center;
+		margin-top: 10px;
+		margin-left: 600px;
+	}
+	
+	.tbl{
+		position:absolute;
+		margin: 120px 400px 100px;
+		padding: 5px 5px 5px 5px;
+		align-items: center;
+	
+	
+
+	
+	}
+
+	</style>
+{% extends 'main.html'%}
+{% block content %}
+
+<div class="tbl">
+	<table class="table">
+	  <thead class="thead-dark">
+		<tr>
+		  <th scope="col">f_name</th>
+		  <th scope="col">l_name</th>
+		  <th scope="col">contact</th>
+		  <th scope="col">email</th>
+		  <th scope="col">message</th>
+		  
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+			{% for data in datas %}
+		<td>{{data.f_name}}</td>
+		  <td>{{data.l_name}}</td>
+		  <td>{{data.contact}}</td>
+		  <td>{{data.email}}</td>
+		  <td>{{data.message}}</td>
+		  
+		</tr>
+		{%endfor%}
+	  </tbody>
+	</table>
+	
+	<!-- <a href="delete/{{student.id}}">Delete</a> -->
+	</br>
+	</div>
+	{% endblock %}

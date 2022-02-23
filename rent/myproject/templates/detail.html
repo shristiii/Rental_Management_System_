@@ -1,0 +1,24 @@
+
+{% load static %}
+{% static "images" as baseUrl  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Detail</title>
+    <link rel="stylesheet" href="{% static './css/read1.css' %}">
+</head>
+<body>
+    <div class="box">
+        <div class="imgBx">
+            <img src="{{data.hotel_Main_Img.url}}">
+        </div>
+       
+        
+        <div class="content">
+        	{{data.desc}}      
+        </div>
+    </div>
+</body>
+</html>

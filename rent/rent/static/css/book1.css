@@ -1,0 +1,321 @@
+/* fonts  */
+@font-face {
+    font-family:"Raleway-regular";
+    src:url(../fonts/Raleway-Regular.ttf)
+}
+@font-face {
+    font-family:"Raleway-medium";
+    src:url(../fonts/Raleway-Medium.ttf)
+}
+@font-face {
+    font-family:"Raleway-bold";
+    src:url(../fonts/Raleway-Bold.ttf)
+}
+@font-face {
+    font-family:"Raleway-extrabold";
+    src:url(../fonts/Raleway-ExtraBold.ttf)
+}
+@font-face {
+    font-family:"Raleway-semibold";
+    src:url(../fonts/Raleway-SemiBold.ttf)
+}
+@font-face {
+    font-family:"Raleway-black";
+    src:url(../fonts/Raleway-Black.ttf)
+}
+
+/* colors  */
+
+:root {
+    --primary:#EEBF00;
+    --secondary:#232B38;
+    --ternary:#6C6C6C;
+    --danger:#FE4545;
+    --pure:#FEFEFE;
+    --light:#F0F0F0;
+    --heaven:#FFFFFF;
+    --footer:#2D333F;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    -webkit-font-smoothing:antialiased;
+    font-family: "Raleway-regular";
+    overflow-x: hidden;
+    width: 100%;
+}
+.container {
+    width:100%;
+    padding:o 15px;
+    margin:0 auto;
+}
+
+@media (min-width:576px){
+    .container{
+        max-width:540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1152px;
+    }
+  }
+  header.topbar{
+    background:var(--primary);
+    color:var(--pure);
+    font-family:"Raleway-semibold";
+    padding:0.75rem 0;
+}
+
+header.topbar .icons input{
+  
+    float: right;
+    padding: 0 1rem;
+    border-radius: 1px;
+    border-color: rgb(19, 20, 20);
+    margin-top: 3px;
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: #fdfcf5; 
+  }
+
+
+header.topbar .auth > div a{
+    color:var(--pure);
+    text-decoration: none;
+}
+header.topbar .icons a{
+  margin-right:0.6rem;
+}
+header.topbar .auth .divider{
+    padding:0 1rem;
+}
+header.topbar .auth > div img{
+    margin-right:0.35rem;
+}
+.flex{
+  display:flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+nav .top{
+    padding:1.4rem 0;
+}
+nav .top .contact h5,  nav .top .time h5{
+    font-family:"Raleway-black";
+    margin-bottom:0.25rem;
+}
+nav .top .contact h6, nav .top .time h6{
+  font-family:"Raleway-medium";
+  letter-spacing: 0.055rem;
+  font-size:0.75rem;
+  color:var(--ternary);
+}
+nav .top .contact img, nav .top .time img{
+  margin-right:1rem;
+}
+
+.justify-center{
+  justify-content:center;
+}
+nav .navbar a{
+  text-decoration:none;
+  color:var(--secondary);
+  font-family:"Raleway-semibold";
+  font-size:1rem;
+  padding:1rem 1.5rem;
+  transition:all .3s ease;
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  -o-transition:all .3s ease;
+}
+nav .navbar a.active{
+  background:var(--primary);
+  color:var(--pure);
+}
+nav .navbar a:hover{
+  background:var(--primary);
+  color:var(--pure); 
+}
+.magic-shadow{
+  position: relative;
+  background:var(--heaven);
+}
+.magic-shadow:after{
+  content:'';
+  display:block;
+  width:100%;
+  height:69px;
+  background-image:url(../icons/shadow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom:-22px;
+  z-index:-1;
+  
+}
+.magic-shadow-sm{
+  position: relative;
+  background:var(--heaven);
+}
+.magic-shadow-sm:after{
+  content:'';
+  display:block;
+  width:100%;
+  height:69px;
+  background-image:url(../icons/shadow-sm.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:-1;
+  -webkit-transform:translateX(-50%);
+  -moz-transform:translateX(-50%);
+  -ms-transform:translateX(-50%);
+  -o-transform:translateX(-50%);
+}
+
+.section-book {
+    height: 90vh;
+    background-image: linear-gradient(to right bottom, #66a5ad, #c0eaf5);
+    
+    align-items: center;
+    margin: 200px;
+    
+  }
+  
+  .book {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 50%,
+        transparent 50%
+      ),
+      url("../images/hotel1.jpeg");
+    background-size: 100%;
+    background-position: right;
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    align-items: center;
+  }
+  
+  .book__form {
+    width: 50%;
+    padding: 20px;
+    position: absolute;
+}
+  
+  .heading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: #07575b;
+  }
+  
+  .form__group {
+    margin-bottom: 2rem;
+  }
+  .form__group:nth-child(3) {
+    margin-bottom: 10px;
+  }
+  
+  .form__input {
+    font-size: 12px;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(196, 223, 230, 0.4);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 70%;
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #07575b;
+    background-color: rgb(196, 223, 230);
+  }
+  
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #db3030;
+  }
+  
+  .form__input::-webkit-input-placeholder {
+    color: grey;
+  }
+  
+  .form__label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+  
+  
+  .btn,
+  .btn:link,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 4rem;
+    background-color: #07575b;
+    color: white;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active,
+  .btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }

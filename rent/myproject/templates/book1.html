@@ -1,0 +1,145 @@
+{% load static %}
+{% static "images" as baseUrl  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta  name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatiable" content="ie=edge">
+	<title>Booking System</title>
+	<link rel="stylesheet" type="text/css" href="{% static './css/book1.css' %}">
+</head>
+<body>
+
+	<header class="topbar">
+            <div class="container flex justify-between items-center">
+                <div class="icons flex items-center">
+                   
+                    
+
+                </div>
+                <div class="auth flex items-center">
+                    
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <nav>
+
+            <div class="top">
+                <div class="container flex justify-between">
+                    <div class="contact flex items-center">
+                        <img src="{% static './icons/phone.svg' %}">
+                        <div>
+                            <h5>Call US: +977 9803204545</h5>
+                            <h6>E-mail: Kantipurealstate@gmail.com </h6>
+                        </div>
+                    </div>
+                    <div class="branding flex items-center">
+                        <img src="{% static './images/lll.png' %}" height="75px" width="100px">
+                    </div>
+                    <div class="time flex items-center">
+                        <img src="{% static './icons/clock.svg' %}">
+                        <div>
+                            <h5>Working Hours</h5>
+                            <h6>Sunday-Friday(10am-5pm)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar magic-shadow">
+                <div class="container flex justify-center">
+                    <a href="/">Home</a>
+                    <a href="/about">About us</a>
+                    <a href="/forrent">For Rent</a>
+                    <a href="/notify">Notify</a>
+                    <a href="/contact">Contact us</a>
+                    
+    
+    
+                </div>
+            </div>
+        </nav>
+        {% for message in messages %}
+        {{message}}
+      {% endfor %}
+
+        <section class="section-book">
+            <div class="book">
+              <div class="book__form">
+                <form action="/submit/{{data.id}}" method="POST" class="form">
+                  {% csrf_token %}
+                  
+                  <h2 class="heading">
+                    Start Booking Now
+                  </h2>
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      class="form__input"
+                      placeholder="Full name"
+                      name="name"
+                      required
+                    />
+                    <label for="name" class="form__label">Full name</label>
+                  </div>
+      
+                  <div class="form__group">
+                    <input
+                      type="email"
+                      class="form__input"
+                      placeholder="Email address"
+                      name="email"
+                      required
+                    />
+                    <label for="email" class="form__label">Email address</label>
+                  </div>
+                      <div class="form__group">
+                          <input
+                          type="contact"
+                          class="form__input"
+                          placeholder="Contact Number"
+                           name="contact"
+                           required
+                          />
+                           <label for="contact" class="form__label">Contact Number</label>
+                      </div>
+      
+                    <div class="form__group">
+                      <input
+                        type="location"
+                        class="form__input"
+                        placeholder="Location"
+                        name="location"
+                        required
+                      />
+                      <label for="location" class="form__label">Location</label>
+                    </div>
+
+                    <div class="form__group">
+                      <input
+                        type="rentno"
+                        class="form__input"
+                        placeholder="Rent Number"
+                        name="rentno"
+                        required
+                      />
+                      <label for="rentno" class="form__label">Rent No</label>
+                    </div>
+                    <input type="date" name="book_date">
+      
+                  
+      
+                  <div class="form__group">
+                    <button class="btn ">Submit &rarr;
+                      <a href="/submit/{{data.id}}"></a>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+</body>
+</html>

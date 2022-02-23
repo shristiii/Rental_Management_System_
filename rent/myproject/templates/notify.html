@@ -1,0 +1,187 @@
+{% load static %}
+{% static "images" as baseUrl  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=devoce-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+	<title>Notification</title>
+	<link rel="stylesheet" href="{% static './css/notify.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+		<header class="topbar">
+            
+        </header>
+        <nav>
+
+            <div class="top">
+                <div class="top">
+                    <div class="container flex justify-between">
+                        <div class="contact flex items-center">
+                            <img src="{% static './icons/phone.svg' %}">
+                            <div>
+                                <h5>Call US: +977 9803204545</h5>
+                                <h6>E-mail: Kantipurealstate@gmail.com </h6>
+                            </div>
+                        </div>
+                        <div class="branding flex items-center">
+                            <img src="{% static './images/lll.png' %}" height="75px" width="100px">
+                        </div>
+                        <div class="time flex items-center">
+                            <img src="{% static './icons/clock.svg' %}">
+                            <div>
+                                <h5>Working Hours</h5>
+                                <h6>Sunday-Friday(10am-5pm)</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar magic-shadow">
+                <div class="container flex justify-center">
+                    <a href="/">Home</a>
+                    <a href="/aboutus">About us</a>
+                    <a href="/forrent">For Rent</a>
+                    <a href="/notify" class="active">Notify</a>
+                    <a href="/contact">Contact us</a>
+                    
+    
+    
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="contain">
+                <form action="/notify_submit" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" id="FirstName" name="fname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" id="LastName" name="lname">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="Email" id="Email" name="email">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Contact">Contact No</label>
+                        <input type="Contact" id="Contact" name="contact">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Message">Message</label>
+                        <textarea name="message" id="Message" cols="30" rows="10"></textarea>
+
+                    </div>
+                    <button type="submit">Submit</button>
+                
+                </form>
+            </div>
+
+            
+        </section>
+
+
+        <footer>
+            <div class="container">
+                <div class="box">
+                    <h3>About us</h3>
+                    <p> It is one of the best online platform in Nepal for those who want to buy,sell and rent their properties.</p>
+                    <a href="/about">
+                    <button class="btn btn-secondary">Read More</button></a>
+                </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href="/about">About us</a>
+                        </li>
+                        <li>
+                            <a href="/forrent">For Rent</a>
+                        </li>
+                        <li>
+                            <a href="/notify">Notify</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/facebook.svg' %}">
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/instagram.svg' %}">
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/twitter.svg' %}">
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="{% static './icons/google.svg' %}">
+                                <span>Google</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box instagram-api">
+                    <h3>Instagram</h3>
+                    <div class="post-wrapper">
+                        <div>
+                            <img src="{% static './images/building1.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room3.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room4.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room5.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/room1.jpg' %}">
+                        </div>
+                        <div>
+                            <img src="{% static './images/building7.jpg' %}">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+            <footer class="copyright">
+                <div>
+                    Copyright © 2020. All rights reserved by <a href="#">Kantipur-Rentalestate.</a>
+                </div>
+            </footer>
+
+        </body>
+        </html>

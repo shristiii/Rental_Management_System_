@@ -1,0 +1,81 @@
+
+<style>
+
+	.btn{
+		align-items: center;
+		margin-top: 10px;
+		margin-left: 600px;
+	}
+	.search{
+		position:absolute;
+		top:150px;
+		left:150px;
+		align:center;
+	}
+	.tbl{
+		position:absolute;
+		margin: 120px 400px 100px;
+		padding: 5px 5px 5px 5px;
+		align-items: center;
+	
+	
+
+	
+	}
+
+	</style>
+	{% extends 'main.html'%}
+	{% block content %}
+	<form action="/notifyadmin">
+	<button type="submit" class="btn btn-primary">Notify
+	</button>
+</form>
+	<div class="search">
+		<form method="get" enctype="multipart/form-data" action='/search'>
+	<div class="input-group">
+	  
+	  
+	</form>
+	</div>
+	</div>
+	<div class="tbl">
+	<table class="table">
+	  <thead class="thead-dark">
+		<tr>
+		  <th scope="col">Rent No</th>
+		  <th scope="col">Name</th>
+		  <th scope="col">Contact</th>
+		  <th scope="col">Email</th>
+		  <th scope="col">Location</th>
+		  <th scope="col">Book_Location</th>
+		  <th scope="col">Current Status</th>
+		  <th scope="col">Booked date</th>
+		  <th scope="col">Status</th>
+
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+			{% for data in datas %}
+		    <th scope="row">{{data.rent_no}}</th>
+		<td>{{data.name}}</td>
+		  <td>{{data.contact}}</td>
+		  <td>{{data.email}}</td>
+		  <td>{{data.location}}</td>
+		  <td>{{data.book_location}}</td>
+		  <td>{{data.status}}</td>
+		  <td>{{data.book_date}}</td>
+		  <td>
+			  <button class="main" type="submit"><a href="/select/{{data.id}}">Booked</a></button>
+			<button class="main" type="submit"><a href="/not_select/{{data.id}}">Not-Booked</a></button>
+		</td>
+		</tr>
+		{%endfor%}
+	  </tbody>
+	</table>
+	
+	<!-- <a href="delete/{{student.id}}">Delete</a> -->
+	</br>
+	</div>
+	{% endblock %}
+	

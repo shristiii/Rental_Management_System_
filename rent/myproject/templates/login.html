@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta  name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatiable" content="ie=edge">
+	<title>Login System</title>
+	<link rel="stylesheet" type="text/css" href="./css/login.css">
+</head>
+<body>
+	<header class="topbar">
+            <div class="container flex justify-between items-center">
+                <div class="icons flex items-center">
+                   
+                    <input type="text" placeholder="Search Location...">
+                    <img src="./icons/search.svg">
+
+                </div>
+                <div class="auth flex items-center">
+                    <div>
+                        <img src="./icons/user-icon.svg">
+                        <a href="#">Log In</a>
+                    </div>
+                    <span class="divider">|</span>
+                    <div>
+                        <img src="./icons/edit.svg">
+                        <a href="#">Register Now</a>
+                    </div>
+                    <span class="divider">|</span>
+                    
+                </div>
+            </div>
+        </header>
+        <nav>
+
+            <div class="top">
+                <div class="container flex justify-between">
+                    <div class="contact flex items-center">
+                        <img src="./icons/phone.svg">
+                        <div>
+                            <h5>Call US: +977 9803204545</h5>
+                            <h6>E-mail: Kantipurealstate@gmail.com </h6>
+                        </div>
+                    </div>
+                    <div class="branding flex items-center">
+                        <img src="./images/lll.png" height="75px" width="100px">
+                    </div>
+                    <div class="time flex items-center">
+                        <img src="./icons/clock.svg">
+                        <div>
+                            <h5>Working Hours</h5>
+                            <h6>Sunday-Friday(10am-5pm)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar magic-shadow">
+                <div class="container flex justify-center">
+                    <a href="index.html">Home</a>
+                    <a href="aboutus.html">About us</a>
+                    <a href="forrent.html">For Rent</a>
+                    <a href="notify.html">Notify</a>
+                    <a href="contact.html">Contact us</a>
+                    
+    
+    
+                </div>
+            </div>
+        </nav>
+
+
+
+        
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                    
+                <form method="POST" id="login" class="input-group">
+                    {% csrf_token %}
+                    <input type="text" name="username" class="input-field" placeholder="User Id" required="">
+                    <input type="password" name="password" class="input-field" placeholder="Enter Password" required="">
+    
+                    <input type="checkbox" name="check-box"> <span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </form>
+                    <form method="POST" action="">
+                        {%csrf_token%}
+                        {% for field in form %}
+                        {{field.label}}
+                        {{field}}
+                            <hr>
+                        {%endfor%}
+                            <div class="btn-block">
+                        {{form.errors}}
+                        {% for message in messages%}
+                        <p id="messeges">{{message}}</p>
+                        {% endfor%}
+                        <button type="submit" href="/">Submit</button>
+
+                    <!-- <input type="text" name="input-field" class="input-field" placeholder="User Id" required="">
+                    <input type="email" name="input-field" class="input-field" placeholder="Email Id" required="">
+                    <input type="text" name="input-field" class="input-field" placeholder="Enter Password" required="">
+                    <input type="text" name="input-field" class="input-field" placeholder="Confirm Password" required="">
+    
+                    <input type="checkbox" name="check-box"> <span>I agree to the terms & Conditions.</span>
+                    <button type="submit" class="submit-btn">Register</button> -->
+                </form>
+    
+            
+            </div>
+        </div>
+        <script>
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+    
+            function register(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+    
+            function login(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+        </script>
+
+        </body>
+        </html>
